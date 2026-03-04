@@ -242,10 +242,21 @@ h3 {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 400;
     color: #cbd5e1;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-details {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.hero-details strong {
+    color: var(--color-accent);
 }
 
 .hero-actions {
@@ -554,8 +565,40 @@ h3 {
 }
 
 /* Submissions Specifics */
-.submissions-content h3 {
-    margin-top: 2rem;
+.submissions-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.submissions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.submission-card {
+    background: var(--bg-surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.submission-card:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.submission-card h3 {
+    margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.35rem;
     color: var(--text-primary);
@@ -567,15 +610,22 @@ h3 {
 .info-block {
     background: rgba(56, 189, 248, 0.05);
     border-left: 4px solid var(--color-accent);
-    padding: 1.25rem;
-    border-radius: 0 8px 8px 0;
-    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(8px);
+}
+
+.info-block.important {
+    border-left-color: #f43f5e;
+    background: rgba(244, 63, 94, 0.05);
 }
 
 .submissions-content a {
     color: var(--color-accent);
     text-decoration: none;
     font-weight: 500;
+    transition: var(--transition-smooth);
 }
 
 .submissions-content a:hover,
