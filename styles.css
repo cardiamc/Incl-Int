@@ -248,6 +248,34 @@ h3 {
     margin-right: auto;
 }
 
+.hero-affiliation {
+    margin-bottom: 2rem;
+}
+
+.affiliation-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+}
+
+.affiliation-badge:hover,
+.affiliation-badge:focus {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.4);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
 .hero-details {
     font-size: 1.15rem;
     color: #e2e8f0;
