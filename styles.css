@@ -120,17 +120,19 @@ body {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 800;
-    background: linear-gradient(to right, var(--color-gradient-start), var(--color-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo span {
-    font-weight: 400;
-    opacity: 0.8;
+.logo img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0) 90%);
+    padding: 0.2rem 1rem;
+    border-radius: 70px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
 }
 
 .nav-links {
