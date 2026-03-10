@@ -488,7 +488,10 @@ h3 {
     flex-wrap: wrap;
 }
 
-.org-links a {
+.org-links a,
+.org-links button {
+    font-family: inherit;
+    cursor: pointer;
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.85rem;
@@ -501,13 +504,16 @@ h3 {
 }
 
 .org-links a:hover,
-.org-links a:focus {
+.org-links a:focus,
+.org-links button:hover,
+.org-links button:focus {
     background: var(--color-accent);
     color: #000;
     border-color: var(--color-accent);
 }
 
-.org-links a:focus-visible {
+.org-links a:focus-visible,
+.org-links button:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 2px;
 }

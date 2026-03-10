@@ -37,4 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Email generator
+    const emailBtns = document.querySelectorAll('.org-email-btn');
+    emailBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const user = this.getAttribute('data-user');
+            const domain = this.getAttribute('data-domain');
+            if (user && domain) {
+                window.location.href = `mailto:${user}@${domain}`;
+            }
+        });
+    });
 });
